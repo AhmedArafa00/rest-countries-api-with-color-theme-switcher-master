@@ -22,10 +22,12 @@ const CountryTwo = () => {
   return (
     <>
       <section className="country">
-      
-      <Link to="/" className="btn btn-light">
-    <FontAwesomeIcon className='btn btn-light' icon={faArrowLeft}/> Back Home
+      <div className='icon'>
+      <Link to="/" className=" back">
+    <FontAwesomeIcon className='' icon={faArrowLeft}/>
+    <h2> Back</h2>
     </Link>
+    </div>
         {country.map((c) => {
           const {
             numericCode,
@@ -50,7 +52,8 @@ const CountryTwo = () => {
                 </div>
 
                 <div className="country-details">
-                  <div>
+                  <div className='list'>
+                  <div className='left'>
                     <h2>{name}</h2>
                     <h5>
                       Native Name: <span>{nativeName}</span>
@@ -68,8 +71,7 @@ const CountryTwo = () => {
                       Capital: <span>{capital}</span>{" "}
                     </h5>
                   </div>
-
-                  <div>
+                  <div className='right'>
                     <h5>
                       Top Level Domain: <span>{topLevelDomain}</span>
                     </h5>
@@ -79,11 +81,10 @@ const CountryTwo = () => {
                     <h5>
                       Languages: <span>{languages[0].name}</span>
                     </h5>
+                    </div>
+                    <div>
                   </div>
-                </div>
-              </div>
-
-              <div>
+                  </div>
                 <h3>Border Countries: </h3>
                 <div className="borders">
                   {borders.map((border) => {
@@ -93,6 +94,8 @@ const CountryTwo = () => {
                       </ul>
                     )
                   })}
+                </div>
+                 
                 </div>
               </div>
             </article>

@@ -6,9 +6,10 @@ import Filter from './Components/Filter';
 import CountryTwo from './Components/CountryTwo';
 function App() {
   return (
-<Router>
+    <Router>
+      <Header />
   <Routes>
-    <Route path='/' element={<><Header /> <Filter /> <Country /></>}></Route>
+    <Route path='/' element={<><Filter /> <Country /></>}></Route>
     <Route path='/countryTwo/:name' element={<CountryTwo />}></Route>
   </Routes>
 </Router>
