@@ -25,19 +25,16 @@ const Country = () => {
       countries.map((c) => {
         const {numericCode, name, population, region, capital, flag } = c
         return <article key={numericCode}>
-            {/* <div> */}
+            <Link to={`/countryTwo/${name}`}>
                 <img src={flag} alt={name}></img>
+                </Link>
                 <div className='details'>
                 <h3>{name}</h3>
                 <h4>Population: <span>{population}</span></h4>
                 <h4>Region: <span>{region}</span></h4>
                 <h4>Capital: <span>{capital}</span></h4>
-               <div className='buttons'>
-               <Link className='btn' to={`/countryTwo/${name}`}>Learn more</Link>
-               <button className='btn' onClick={() => removeCountry(numericCode)}>Remove Country</button>
-               </div>
+             
                 </div>
-            {/* </div> */}
         </article>
       })} 
      </section>
