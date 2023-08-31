@@ -12,12 +12,6 @@ const Country = () => {
         }
         fetchCountries()
     },[])
-    const removeCountry = (numericCode) => {
-      const newCountry = countries.filter((b)=> b.numericCode !==
-       numericCode
-       )
-      setCountries(newCountry)
-    }
   return (
     <>
      <section className='grid'>

@@ -1,24 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Filter = () => {
+  const filterRegions = async () => {
+   
+  }
+  useEffect(()=> {
+    filterRegions()
+  })
   return (
     <section className='filter'>
        <form className='form-control'>
-        <input type='search' name='search' id='search'
-        placeholder='Search for a country'></input>
+       <input type="text"
+          placeholder="Search for a country"
+          className="input"
+          name="input" />
        </form>
        <div className="region-filter">
-          <select
-            name="select"
-            id="select"
-          >
-            <option value="Filter by region">Filter by region</option>
-            <option value="Africa">Africa</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Americas">Americas</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+       <select>
+        <option value="none">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
         </div>
     </section>
   )
