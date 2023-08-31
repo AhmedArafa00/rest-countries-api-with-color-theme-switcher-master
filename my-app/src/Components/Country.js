@@ -26,8 +26,10 @@ const Country = () => {
         const {numericCode, name, population, region, capital, flag } = c
         return <article key={numericCode}>
             <Link to={`/countryTwo/${name}`}>
-                <img src={flag} alt={name}></img>
-                </Link>
+              <div className='image'>
+                <img src={flag} alt={name}>
+                </img>
+                </div>
                 <div className='details'>
                 <h3>{name}</h3>
                 <h4>Population: <span>{population}</span></h4>
@@ -35,6 +37,7 @@ const Country = () => {
                 <h4>Capital: <span>{capital}</span></h4>
              
                 </div>
+                </Link>
         </article>
       })} 
      </section>

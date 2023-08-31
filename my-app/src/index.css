@@ -146,6 +146,7 @@ ul {
   -ms-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
   color: var(--text);
+  height: 100%;
 }
 .grid .details h3 {
   padding-bottom: 10px;
@@ -185,6 +186,15 @@ font-weight: 300;
   .grid {
     grid-template-columns:repeat(4, 1fr);
     gap: 60px;
+  }
+  .grid .image {
+    height: 180px;
+    
+  }
+  .grid .image img {
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
   }
 }
 @media (max-width:767px) {
