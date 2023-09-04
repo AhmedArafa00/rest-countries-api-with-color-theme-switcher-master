@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
 const Filter = () => {
-  const [search, setSearch] = useState('')
-  console.log(search)
   return (
     <section className='filter'>
        <form className='form-control'>
        <input type="text"
           placeholder="Search for a country"
           className="input"
-          name="input" onChange={e => setSearch(e.target.value)}/>
+          name="input"
+       />
        </form>
        <div className="region-filter">
        <select>
