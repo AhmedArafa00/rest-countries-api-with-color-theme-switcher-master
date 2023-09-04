@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Filter from './Filter'
 
 const Url = 'https://restcountries.com/v2/all'
 const Country = () => {
-    const [countries, setCountries] = useState([])
+  const [countries, setCountries] = useState([ ])
+  const [isLoading, setIsLoading] = useState(true)
     useEffect(()=> {
         const fetchCountries = async () => {
             const response = await fetch(Url)
             const countries = await response.json()
             setCountries(countries)
+            setIsLoading(false)
         }
         fetchCountries()
     },[])
   return (
     <>
-     <section className='grid'>
-     {
+    {isLoading ? <h1 className='loading'>Loading....</h1> : 
+      <section className='grid'>
+      {
       countries.map((c) => {
         const {numericCode, name, population, region, capital, flag } = c
         return <article key={numericCode}>
@@ -35,9 +39,10 @@ const Country = () => {
         </article>
       })} 
      </section>
-    </>
-  )        
-    
+}
+    </>    
+
+  )    
 }
 
 export default Country

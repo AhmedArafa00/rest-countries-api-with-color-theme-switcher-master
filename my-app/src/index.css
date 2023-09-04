@@ -46,10 +46,15 @@ ul {
   -ms-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
 }
-
 .btn:hover {
   background-color: #fff;
   color:  hsl(207, 26%, 17%);
+}
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 /* Start Header */
 .header {
