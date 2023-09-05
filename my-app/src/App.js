@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Header />
   <Routes>
-    <Route path='/' element={<><Filter /> <Country /></>}></Route>
+    <Route path='/' element={<Country />}></Route>
     <Route path="/:name" element={<CountryTwo />}></Route>
     <Route path='*' element={<Error />}></Route>
   </Routes>

@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Filter from './Filter'
 
- //const Url = 'https://restcountries.com/v2/all'
  const Url = 'https://restcountries.com/v3.1/all'
-
-
-
 const Country = () => {
   const [countries, setCountries] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -23,14 +19,15 @@ const Country = () => {
    
   return (
     <>
+        <Filter countries={countries} setCountries={setCountries} />
     {isLoading ? <h1 className='loading'>Loading....</h1> :
       <section className='grid'>
       {
       countries.map((item) => {
         const {subregion, name, population, region, flags } = item
         return (
-            <>
-          <article>  
+          <>
+          <article>
              <Link to={`/${name.common}`}> 
               <div className='image'>
                 <img src={flags.svg} alt={name}>

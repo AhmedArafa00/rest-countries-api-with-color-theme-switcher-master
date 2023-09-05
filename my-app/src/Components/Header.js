@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMoon} from '@fortawesome/free-regular-svg-icons'
+import {faSun} from '@fortawesome/free-regular-svg-icons'
 
 const Header = () => {
   const [theme, setTheme] = useState("light")
@@ -22,10 +23,15 @@ const Header = () => {
         <>
     <header className='header'>
         <div className='container'>
-        <h1>Where in the world?</h1>
-        <div className='mode' onClick={switchTheme}>
-        <FontAwesomeIcon className='fa-moon'icon={faMoon} /> Dark Mood
+       <h1>Where in the world?</h1>
+       {
+        theme === "dark" ? <div className='mode' onClick={switchTheme}>
+        <FontAwesomeIcon className='fa-moon'icon={faMoon}/> Dark Mood
+        </div> : <div className='mode' onClick={switchTheme}>
+       <FontAwesomeIcon className='fa-moon' icon={faSun} />light Mood
         </div>
+       }
+       
         </div>
         </header> 
         </>

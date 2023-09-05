@@ -75,6 +75,10 @@ ul {
 .header .mode {
   cursor: pointer;
 }
+.header .fa-moon {
+  margin-right: 6px;
+    font-size: 15px;
+}
 .header h1 {
   font-size: 24px;
   font-weight: 600;
@@ -299,7 +303,7 @@ a {
 
   }
   .country .country-details {
-   flex: 1;
+    flex: 1;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -334,4 +338,7 @@ a {
   .country .country-inner .borders ul {
     flex-wrap: wrap;
   }
+  .grid article .image {
+     height: fit-content;
+}
 }
